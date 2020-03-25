@@ -1,0 +1,40 @@
+definitions:
+  main.Person:
+    properties:
+      desc:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+    type: object
+info:
+  contact: {}
+  license: {}
+paths:
+  /person/{id}:
+    get:
+      description: get person
+      parameters:
+      - description: person search by id
+        in: path
+        name: id
+        required: true
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Get person
+  /persons:
+    get:
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/main.Person'
+            type: array
+      summary: Get All person
+swagger: "2.0"
