@@ -5,6 +5,10 @@ echo swagger rest demo
 
 to generate docs folder
 $ swag init
+
+
+swagger url
+http://localhost:1323/swagger/index.html
  
 
 ### install swag
